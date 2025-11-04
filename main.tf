@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 # Generate key pair locally and in AWS
@@ -63,8 +63,8 @@ resource "aws_security_group" "jenkins_sg" {
 
 # Launch EC2 instance and provision via SSH
 resource "aws_instance" "jenkins" {
-  ami                    = "ami-08a6efd148b1f7504" # Amazon Linux 2023
-  instance_type          = "t3.large"
+  ami                    = "ami-196061557748" # Amazon Linux 2023
+  instance_type          = "m7i-flex.large"
   key_name               = aws_key_pair.jenkins_key.key_name
   vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
 
