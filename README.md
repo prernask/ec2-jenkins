@@ -1,4 +1,4 @@
-# 🚀 Jenkins Setup on EC2 with Git and Docker
+# 🚀 Jenkins Setup on EC2 with Git and Docker using terraform
 
 This guide helps you set up Jenkins on an EC2 instance with Git and Docker integration.
 
