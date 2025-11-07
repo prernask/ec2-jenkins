@@ -63,8 +63,8 @@ resource "aws_security_group" "jenkins_sg" {
 
 # Launch EC2 instance and provision via SSH
 resource "aws_instance" "jenkins" {
-  ami                    = "ami-01760eea5c574eb86" # Amazon Linux 2023
-  instance_type          = "m7i-flex.large"
+  ami                    = "ami-0157af9aea2eef346" # Amazon Linux 2023
+  instance_type          = "c7i-flex.large"
   key_name               = aws_key_pair.jenkins_key.key_name
   vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
 
